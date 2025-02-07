@@ -1,0 +1,44 @@
+Script started on 2025-02-07 03:38:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="151" LINES="15"]
+[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ sbcl
+This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (car (cdr (cdr '(a b x d))))
+
+X
+* (car (cdr (cdr (car (cdr '(a (b (x d))))))))
+
+NIL
+* X
+
+debugger invoked on a UNBOUND-VARIABLE in thread
+#<THREAD "main thread" RUNNING {9461061}>:
+  The variable X is unbound.
+
+Type HELP for debugger help, or (SB-EXT:EXIT) to exit from SBCL.
+
+restarts (invokable by number or by possibly-abbreviated name):
+  0: [ABORT] Exit debugger, returning to top level.
+
+(SB-INT:SIMPLE-EVAL-IN-LEXENV X #<NULL-LEXENV>)
+0] (car (cdr (car (cdr (car (car '(((a (b (x) d))))))))))
+
+(X)
+0] (cons 'a (cons 'b (cons 'x (cons 'd nil))))
+
+(A B X D)
+0] (cons 'a (cons (cons 'b (cons (cons 'x (cons 'd nil)) nil)) nil))
+
+(A (B (X D)))
+0] (cons (cons (cons 'a (cons (cons 'b (cons (cons 'x nil) (cons 'd nil))) nil)) nil) nil)
+
+(((A (B (X) D))))
+0] (cons (cons (cons 'a (cons (cons 'b (cons (cons 'x nil) (cons 'd nil))) nil)) nil) nil)
+
+(((A (B (X) D))))
+0] (exit)
+[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m/workspaces/csci-330-homeworks-fathaabdi24 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@fathaabdi24 [0m➜ [1;34m

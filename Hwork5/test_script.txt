@@ -1,0 +1,2 @@
+;; This file will contain 7 valid and 7 invalid test cases for my parser.
+;; I will run them using SBCL or another LISP interpreter and save the output here.

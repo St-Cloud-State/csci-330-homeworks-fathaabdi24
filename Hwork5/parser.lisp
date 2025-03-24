@@ -57,4 +57,12 @@
   (when (char= (peek) #\s)
     (consume #\s)
     (parse-L-Prime)))
+(defun run-parser (input-string)
+  (setf *input* input-string)
+  (setf *current* 0)
+  (parse-I)
+  (if (= *current* (length *input*))
+      (format t "ACCEPTED: ~a~%" input-string)
+      (format t "REJECTED: Unused input after position ~a~%" *current*)))
+
 

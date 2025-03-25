@@ -21,7 +21,7 @@
   (consume #\i)
   (parse-E)
   (parse-S)
-  (when (and (peek) (char= (peek) #\e))  ;; ✅ SAFE FIX HERE
+  (when (and (peek) (char= (peek) #\e))  
     (consume #\e)
     (parse-S)))
 

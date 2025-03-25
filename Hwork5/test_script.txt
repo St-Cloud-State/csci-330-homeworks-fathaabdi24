@@ -1,2 +1,17 @@
 ;; This file will contain 7 valid and 7 invalid test cases for my parser.
 ;; I will run them using SBCL or another LISP interpreter and save the output here.
+(run-parser "ixoyowdssbes") ; ACCEPTED
+(run-parser "ixoys")        ; ACCEPTED
+(run-parser "ixozs")        ; ACCEPTED
+(run-parser "iyowdsb")      ; ACCEPTED
+(run-parser "ixdsbes")      ; ACCEPTED
+(run-parser "ixoyozdsb")    ; ACCEPTED
+(run-parser "ixoyozdsbes")  ; ACCEPTED
+
+(run-parser "xoyowdssbes")  ; REJECTED - missing i
+(run-parser "ixoyowdssbe")  ; REJECTED - missing final s
+(run-parser "ixoysx")       ; REJECTED - extra x
+(run-parser "ixoyozbss")    ; REJECTED - invalid S
+(run-parser "ixoyodsb")     ; REJECTED - invalid G/L
+(run-parser "ixoyowsb")     ; REJECTED - unused input
+(run-parser "ixy")          ; REJECTED - too short

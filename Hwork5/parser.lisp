@@ -65,4 +65,3 @@
       (format t "ACCEPTED: ~a~%" input-string)
       (format t "REJECTED: Unused input after position ~a~%" *current*)))
 
-

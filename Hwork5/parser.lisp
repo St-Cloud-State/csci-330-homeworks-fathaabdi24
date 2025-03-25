@@ -1,6 +1,7 @@
 ;; Homework 5 - Recursive Descent Parser
 ;; Author: Fathaabdi24
 ;; This is the main parser file.
+
 (defvar *input* nil)
 (defvar *current* 0)
 
@@ -15,11 +16,12 @@
         (incf *current*)
         t)
       (error "Expected ~a but found ~a" expected (peek))))
+
 (defun parse-I ()
   (consume #\i)
   (parse-E)
   (parse-S)
-  (when (char= (peek) #\e)
+  (when (and (peek) (char= (peek) #\e))  ;; ✅ SAFE FIX HERE
     (consume #\e)
     (parse-S)))
 
@@ -28,7 +30,7 @@
   (parse-E-Prime))
 
 (defun parse-E-Prime ()
-  (when (char= (peek) #\o)
+  (when (and (peek) (char= (peek) #\o))
     (consume #\o)
     (parse-G)
     (parse-E-Prime)))
@@ -54,9 +56,10 @@
   (parse-L-Prime))
 
 (defun parse-L-Prime ()
-  (when (char= (peek) #\s)
+  (when (and (peek) (char= (peek) #\s))
     (consume #\s)
     (parse-L-Prime)))
+
 (defun run-parser (input-string)
   (setf *input* input-string)
   (setf *current* 0)
@@ -64,4 +67,3 @@
   (if (= *current* (length *input*))
       (format t "ACCEPTED: ~a~%" input-string)
       (format t "REJECTED: Unused input after position ~a~%" *current*)))
-
